@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Marketing</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Estimación de propensión</h1>
+        <p class="description">
+            Ingresa los datos del cliente para estimar si contratará un depósito.
+        </p>
+
+        <form id="prediction-form">
+            <div class="form-grid">
+                <div>
+                    <label for="age">Edad</label>
+                    <input id="age" type="number" min="18" max="100" value="41" required>
+                </div>
+
+                <div>
+                    <label for="job">Ocupación</label>
+                    <select id="job" required>
+                        <option value="admin.">Administración</option>
+                        <option value="blue-collar">Trabajo manual</option>
+                        <option value="entrepreneur">Emprendedor</option>
+                        <option value="housemaid">Trabajo doméstico</option>
+                        <option value="management">Gerencia</option>
+                        <option value="retired">Retirado</option>
+                        <option value="self-employed">Independiente</option>
+                        <option value="services">Servicios</option>
+                        <option value="student">Estudiante</option>
+                        <option value="technician" selected>Técnico</option>
+                        <option value="unemployed">Desempleado</option>
+                        <option value="unknown">Desconocido</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="marital">Estado civil</label>
+                    <select id="marital" required>
+                        <option value="single">Soltero</option>
+                        <option value="married" selected>Casado</option>
+                        <option value="divorced">Divorciado</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="education">Educación</label>
+                    <select id="education" required>
+                        <option value="primary">Primaria</option>
+                        <option value="secondary" selected>Secundaria</option>
+                        <option value="tertiary">Superior</option>
+                        <option value="unknown">Desconocida</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="balance">Balance</label>
+                    <input id="balance" type="number" value="3200" required>
+                </div>
+
+                <div>
+                    <label for="campaign">Contactos de campaña</label>
+                    <input id="campaign" type="number" min="1" max="100" value="2" required>
+                </div>
+
+                <div>
+                    <label for="housing">Crédito hipotecario</label>
+                    <select id="housing" required>
+                        <option value="yes" selected>Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="loan">Préstamo personal</label>
+                    <select id="loan" required>
+                        <option value="yes">Sí</option>
+                        <option value="no" selected>No</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit">Estimar propensión</button>
+        </form>
+
+        <div id="result">
+            <h2>Resultado</h2>
+            <p>Probabilidad: <strong id="probability"></strong></p>
+            <p>Predicción: <strong id="prediction"></strong></p>
+            <p>Clasificación: <strong id="classification"></strong></p>
+            <p class="note">Este resultado es una estimación, no una certeza.</p>
+        </div>
+
+        <div id="error">No fue posible realizar la predicción. Revisa los datos.</div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,23 @@
+{
+  "request": {
+    "age": "hola",
+    "job": "technician",
+    "marital": "married",
+    "education": "secondary",
+    "balance": 3200,
+    "housing": "yes",
+    "loan": "no",
+    "campaign": 2
+  },
+  "status_code": 422,
+  "response": {
+    "detail": [
+      {
+        "type": "int_parsing",
+        "loc": ["body", "age"],
+        "msg": "Input should be a valid integer, unable to parse string as an integer",
+        "input": "hola"
+      }
+    ]
+  }
+}

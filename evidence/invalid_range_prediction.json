@@ -1,0 +1,24 @@
+{
+  "request": {
+    "age": -10,
+    "job": "technician",
+    "marital": "married",
+    "education": "secondary",
+    "balance": 3200,
+    "housing": "yes",
+    "loan": "no",
+    "campaign": 2
+  },
+  "status_code": 422,
+  "response": {
+    "detail": [
+      {
+        "type": "greater_than_equal",
+        "loc": ["body", "age"],
+        "msg": "Input should be greater than or equal to 18",
+        "input": -10,
+        "ctx": {"ge": 18}
+      }
+    ]
+  }
+}

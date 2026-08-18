@@ -6,7 +6,6 @@ Esta aplicación estima la probabilidad de que un cliente contrate un depósito 
 Frontend -> API -> Modelo -> Resultado
 ```
 
-El resultado es una estimación, no una certeza.
 
 ## Estructura
 
@@ -37,8 +36,6 @@ Variables utilizadas:
 - `campaign`: contactos realizados.
 
 La variable que se quiere predecir es `y`, que puede ser `yes` o `no`.
-
-No se usa `duration` porque la duración de la llamada se conoce después de contactar al cliente.
 
 ## Instalación
 
